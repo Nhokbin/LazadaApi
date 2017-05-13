@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="lazada" transaction-type="RESOURCE_LOCAL">
+		<class>com.dav.lazada.entity.Category</class>
+		<class>com.dav.lazada.entity.Supplier</class>
+		<class>com.dav.lazada.entity.CategoryEmployee</class>
+		<class>com.dav.lazada.entity.Comment</class>
+		<class>com.dav.lazada.entity.Order</class>
+		<class>com.dav.lazada.entity.OrderDetail</class>
+		<class>com.dav.lazada.entity.Product</class>
+		<class>com.dav.lazada.entity.Supplier</class>
+		<class>com.dav.lazada.entity.Desiderate</class>
+		<class>com.dav.lazada.entity.Promotion</class>
+		<class>com.dav.lazada.entity.PromotionDetail</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/applazada" />
+			<property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="nhokbinkho" />
+			<!-- to auto create table -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+			<property name="openjpa.Log" value="SQL=TRACE" />
+		</properties>
+
+	</persistence-unit>
+</persistence>
